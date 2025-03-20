@@ -80,13 +80,16 @@ let lastKey = ''
 
 const map = [
     ['-', '-', '-', '-', '-', '-', '-'],
-    ['-', ' ', ' ', ' ', ' ', ' ', '-'],
-    ['-', ' ', '-', ' ', '-', ' ', '-'],
-    ['-', ' ', ' ', ' ', ' ', ' ', '-'],
-    ['-', ' ', '-', ' ', '-', ' ', '-'],
-    ['-', ' ', ' ', ' ', ' ', ' ', '-'],
+    ['|', ' ', ' ', ' ', ' ', ' ', '|'],
+    ['|', ' ', '-', ' ', '-', ' ', '|'],
+    ['|', ' ', ' ', ' ', ' ', ' ', '|'],
+    ['|', ' ', '-', ' ', '-', ' ', '|'],
+    ['|', ' ', ' ', ' ', ' ', ' ', '|'],
     ['-', '-', '-', '-', '-', '-', '-']
 ]
+
+const image = new Image()
+image.src = './img/pipeHorizontal.png'
 
 
 map.forEach((row, i) => {
@@ -98,9 +101,20 @@ map.forEach((row, i) => {
                         position: {
                             x: Boundary.width * j,
                             y: Boundary.height * i
-                        }
+                        },
+                        image: image
                     }))
                 break;
+            case '|':
+                boundaries.push(
+                    new Boundary({
+                        position:{
+                            x:Boundary.width * j
+                            y:Boundary.width * i
+                        },
+                        image: Image
+                    })
+                )
         }
     })
 })
