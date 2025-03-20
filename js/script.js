@@ -7,7 +7,7 @@ window.onresize = function () {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 }
-//code is lukes
+
 class Boundary {
     static width = 40
     static height = 40
@@ -104,7 +104,7 @@ map.forEach((row, i) => {
         }
     })
 })
-//code is lukes
+
 function circleCollidesWithRectangle({
     circle,
     rectangle
@@ -224,7 +224,7 @@ function animate() {
     player.update();
     // player.velocity.x=0;
     // player.velocity.y=0;
-    //code is lukes
+    
 
 
 }
@@ -249,7 +249,7 @@ addEventListener('keydown', ({ key }) => {
             keys.d.pressed = true;
             lastKey = 'd'
             break
-    }//code is lukes
+    }
 })
 addEventListener('keyup', ({ key }) => {
     switch (key) {
